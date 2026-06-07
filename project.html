@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Траектория успеха | Навигатор возможностей ТюмГУ</title>
+    <!-- Подключаем Tailwind CSS для современного UI-дизайна -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-blue-500 selection:text-white">
+
+    <!-- БЛОК 1: ОБЛОЖКА (Zero Block Style) -->
+    <header class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden px-4">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500 rounded-full filter blur-3xl delay-1000"></div>
+        </div>
+        
+        <div class="relative max-w-4xl text-center z-10">
+            <span class="inline-block px-4 py-1.5 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm border border-blue-500/30">
+                В рамках национального проекта «Молодёжь и дети»
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white via-slate-100 to-blue-400 bg-clip-text text-transparent leading-tight">
+                Твой регион — твоя траектория успеха. Создай будущее своими руками!
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 font-light max-w-3xl mx-auto mb-10 leading-relaxed">
+                Все самые крутые стажировки, гранты и волонтерские программы Тюмени уже здесь. Они реализуются для тебя в рамках флагманского нацпроекта <strong class="text-blue-400 font-semibold">«Молодёжь и дети»</strong>, а также ключевых проектов <strong class="text-emerald-400 font-semibold">«Россия — страна возможностей»</strong>, <strong class="text-amber-400 font-semibold">«Профессионалитет»</strong> и <strong class="text-rose-400 font-semibold">«#МЫВМЕСТЕ»</strong>.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#roadmap" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-medium rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:-translate-y-0.5">
+                    Включиться в развитие региона ⚡
+                </a>
+            </div>
+            <p class="text-xs text-slate-400 mt-4 italic">Помни: Твой успех — только в твоих руках! Действуй без страха и сомнений.</p>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-slate-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <!-- БЛОК 2: МАНИФЕСТ ВОЗМОЖНОСТЕЙ -->
+    <section class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-emerald-500"></div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-slate-900">
+                <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Твой личный навигатор больших перспектив
+            </h2>
+            <div class="space-y-4 text-slate-600 leading-relaxed text-base md:text-lg">
+                <p>
+                    Хватит тратить время на поиски разрозненной информации! Государство и ведущие компании региона уже выделили огромные ресурсы на твою поддержку. Участие в этих программах — это не просто строчка в резюме, это реальный шанс принять участие в развитии родной Тюменской области <strong>твоими собственными руками</strong>.
+                </p>
+                <p class="font-medium text-slate-900 border-l-4 border-blue-500 pl-4 my-4 italic">
+                    «Твой старт начинается не после получения диплома. Твой старт — это то, что ты делаешь сегодня, прямо в этот момент!»
+                </p>
+                <p>
+                    Мы собрали все лучшие инструменты экосистемы ТюмГУ и ключевых федеральных программ в единую пошаговую систему. Никакой лишней бюрократии — только готовые алгоритмы для твоего взлёта по годам обучения.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: ИНТЕРАКТИВНЫЙ ХАБ «ДОРОЖНАЯ КАРТА ПО КУРСАМ» -->
+    <section id="roadmap" class="py-20 bg-slate-100 border-t border-b border-slate-200 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Интерактивная карта твоего роста</h2>
+                <p class="text-slate-600 max-w-xl mx-auto">Выбирай свой курс, изучай возможности без сложных отборов и забирай пошаговые инструкции.</p>
+            </div>
+
+            <!-- ТАБЫ (Переключатели курсов) -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12 bg-white p-2 rounded-2xl shadow-sm border border-slate-200 max-w-xl mx-auto">
+                <button onclick="switchTab('course-1')" id="btn-course-1" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-sm">
+                    1 КУРС
+                </button>
+                <button onclick="switchTab('course-2')" id="btn-course-2" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                    2 КУРС
+                </button>
+                <button onclick="switchTab('course-3')" id="btn-course-3" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                    3 КУРС
+                </button>
+                <button onclick="switchTab('course-4')" id="btn-course-4" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                    4 КУРС +
+                </button>
+            </div>
+
+            <!-- =================== 1 КУРС =================== -->
+            <div id="course-1" class="tab-content active space-y-8">
+                <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-blue-800 font-medium text-center text-sm md:text-base">
+                    🎯 <strong>Твой легкий вход и адаптация без стресса.</strong> Проекты без жесткого отбора, новые друзья и первые социальные инициативы!
+                </div>
+                
+                <!-- Карточка 1.1: Волонтерство -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Проект «#МЫВМЕСТЕ»</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Волонтерство в ТюмГУ и развитие твоих Soft Skills</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-slate-800 flex items-center gap-2">🔹 Социальная сфера: «Школа добровольца»</h4>
+                            <p class="text-slate-600 text-sm">Программа пошагового обучения от теории до практики. Позволяет получить официальную квалификацию (стажер, доброволец) и помогать тем, кто в этом нуждается.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-slate-800 flex items-center gap-2">🔹 Юридическая сфера: «Первый шаг в профессию»</h4>
+                            <p class="text-slate-600 text-sm">Для будущих юристов — участие в правоохранительных акциях, работа с детьми. Отличная замена скучной учебной практике на живых примерах.</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-6 mt-6">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Пошаговый алгоритм действий для первокурсника:</h4>
+                        <div class="space-y-4 relative border-l-2 border-slate-200 pl-5 ml-2 text-sm">
+                            <div class="relative"><span class="absolute -left-[29px] top-0 bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">1</span> Зарегистрируйся на <strong class="text-slate-900">DOBRO.RU</strong> для верификации твоих волонтерских часов.</div>
+                            <div class="relative"><span class="absolute -left-[29px] top-0 bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">2</span> Вступи в Волонтерский центр ТюмГУ через соцсети и выбери дисциплину «Обучение служением».</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 1.2: Проекты без отбора -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Обучение без отбора</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Старт без ограничений и опыта</h3>
+                    <div class="grid md:grid-cols-3 gap-6 mt-6 text-sm">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Школа проектных компетенций</h4>
+                            <p class="text-slate-600">Курс от бизнес-тренеров. Обучение проектной логике с нуля, без жестких критериев отбора и отсева.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Welcome-центр ТюмГУ</h4>
+                            <p class="text-slate-600">Студенческое объединение. Попробуй себя в роли экскурсовода или организатора событий — весело и легко.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Программа «Сириус Лето»</h4>
+                            <p class="text-slate-600">Стань наставником для школьников, решая вместе с ними интересные задачи. Первые навыки лидерства!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================== 2 КУРС =================== -->
+            <div id="course-2" class="tab-content space-y-8">
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800 font-medium text-center text-sm md:text-base">
+                    🎯 <strong>Время привлекать ресурсы!</strong> Переходи от идей к финансированию и профильным стажировкам для новичков.
+                </div>
+
+                <!-- Карточка 2.1: Профильные стажировки для новичков -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md">Проект «Профессионалитет»</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Профильный опыт для начинающих специалистов</h3>
+                    <p class="text-slate-500 mt-2 mb-6">Не бойся отсутствия стажа — регион и партнеры предлагают отличные условия для старта:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 text-sm">
+                        <div class="p-5 bg-amber-50/30 border border-amber-100 rounded-xl">
+                            <h4 class="font-bold text-slate-900 mb-2">🌾 Агро-сектор: Холдинг «ЭкоНива»</h4>
+                            <p class="text-slate-600">Позиция помощника специалиста по мониторингу почв. Предоставляется полный соцпакет, оплата, проживание и опытный наставник.</p>
+                        </div>
+                        <div class="p-5 bg-slate-50 border border-slate-100 rounded-xl">
+                            <h4 class="font-bold text-slate-900 mb-2">⚙️ Индустрия: Проект «Профстажировка 2.0»</h4>
+                            <p class="text-slate-600">Практика на реальном предприятии с закрепленным наставником. Идеально для инженерно-технических специальностей.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 italic">Совет: Изучи также вакансии «ученик маляра по металлу» в «Сибнефтемаше» или программы Кадрового центра «Работа России» для твоего первого бесстрессового трудоустройства.</p>
+                </div>
+
+                <!-- Карточка 2.2: Гранты Росмолодежи -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md">Росмолодёжь.Гранты</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Создай свой проект и выиграй до 1 000 000 рублей</h3>
+                    <div class="border-t border-slate-100 pt-6 mt-4">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Инструкция по выигрышу гранта:</h4>
+                        <div class="space-y-4 relative border-l-2 border-slate-200 pl-5 ml-2 text-sm">
+                            <div><strong>1. Сформулируй проблему:</strong> Найди острую социальную проблему региона и опиши её решение.</div>
+                            <div><strong>2. Оформи проектную карту:</strong> Заполни цели по SMART, календарный план и детализированную смету в АИС «Молодежь России».</div>
+                            <div><strong>3. Пройди экспертизу в Тюмени:</strong> Обратись за бесплатной консультацией в проектный офис МЦ «Поколение» или мультицентр «Моя территория». Эксперты помогут доработать смету до подачи заявки!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================== 3 КУРС =================== -->
+            <div id="course-3" class="tab-content space-y-8">
+                <div class="p-4 bg-purple-50 border border-purple-200 rounded-xl text-purple-800 font-medium text-center text-sm md:text-base">
+                    🎯 <strong>Выходи на профессиональный уровень!</strong> Олимпиады, работа в науке, IT-хабы и крупные корпорации.
+                </div>
+
+                <!-- Карточка 3.1: Бизнес и корпорации -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">Проект «Россия — страна возможностей»</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">🏢 Интеграция в крупный бизнес и корпорации</h3>
+                    <p class="text-slate-600 text-sm mt-2 mb-6">Университет активно взаимодействует с лидерами рынка, чтобы дать тебе доступ к масштабным задачам:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 text-sm">
+                        <div class="p-4 border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-slate-900 mb-2">Крупнейшие компании-партнеры ТюмГУ:</h4>
+                            <ul class="space-y-2 text-slate-600 list-disc pl-4">
+                                <li><strong>СИБУР:</strong> IT-направления, видеоаналитика, промышленная робототехника.</li>
+                                <li><strong>Schlumberger:</strong> Длительные, глубокие стажировки сроком на 9-12 месяцев.</li>
+                                <li><strong>Лидеры рынка:</strong> «Газпром», «Сбер», «Альфа-Банк», Wildberries.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-xl bg-indigo-50/20">
+                            <h4 class="font-bold text-indigo-950 mb-2">🚀 Программа «Первая стажировка»</h4>
+                            <p class="text-slate-700 leading-relaxed">Реализуется благотворительным фондом «Система». Помогает талантливым студентам ТюмГУ безболезненно получить первый подтвержденный опыт работы в крупнейших холдингах России.</p>
+                            <a href="https://yandex.ru/profi/" target="_blank" class="text-indigo-600 font-semibold underline text-xs mt-3 inline-block">Зарегистрироваться на «Я — профессионал» ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3.2: IT и наука -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">IT & Инновации</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">💻 Технологический трек и лаборатории</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mt-6 text-sm">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900">Технологические стажировки</h4>
+                            <p class="text-slate-600">Пройди отбор в Тюменский IT-хаб Schlumberger (направление сетевого администрирования) или попробуй свои силы в реальных технологических стартапах ГК «ТехноСпарк».</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900">Работа в науке и инновациях</h4>
+                            <p class="text-slate-600">Ты можешь официально трудоустроиться младшим научным сотрудником или инженером-исследователем прямо в передовых лабораториях ТюмГУ или в одном из 22 малых инновационных предприятий вуза.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3.3: Международные программы -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-sky-600 bg-sky-50 px-2.5 py-1 rounded-md">Международный трек</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">🌍 Международные и языковые стажировки</h3>
+                    <p class="text-slate-600 text-sm mt-2">
+                        Даже сегодня у тебя есть возможность увидеть мир. Ежегодно более 150 студентов ТюмГУ проходят профильные учебные и языковые стажировки в дружественных зарубежных университетах-партнерах Китая, Японии, Испании и других стран. Обратись в Международный департамент вуза для подачи заявки.
+                    </p>
+                </div>
+            </div>
+
+            <!-- =================== 4 КУРС =================== -->
+            <div id="course-4" class="tab-content space-y-8">
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-teal-800 font-medium text-center text-sm md:text-base">
+                    🎯 <strong>Финишная прямая!</strong> Престижная оплачиваемая госслужба, карьерные офферы и внутренняя занятость.
+                </div>
+
+                <!-- Карточка 4.1: Стажировки на госслужбе -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">Управление регионом</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">🏛️ Оплачиваемые стажировки в органах власти</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mt-6 text-sm">
+                        <div class="p-5 bg-teal-50/40 rounded-xl border border-teal-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Федеральный уровень: «Стажер госслужбы России»</h4>
+                            <p class="text-slate-600">Специальная программа Минобрнауки РФ для молодых специалистов (18-35 лет). Пройди полноценную оплачиваемую стажировку в федеральном ведомстве с высоким шансом дальнейшего официального трудоустройства.</p>
+                        </div>
+                        <div class="p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Региональный уровень: Аппарат Губернатора ТО</h4>
+                            <p class="text-slate-600">Стажировка в Аппарате Губернатора и Правительства Тюменской области. Узнай систему госуправления изнутри, прояви себя и получи путевку в преданный кадровый резерв региона.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-amber-50/50 text-amber-900 rounded-xl text-xs">
+                        🌾 <strong>Программа «Едем на село» от Аграрного института:</strong> Специализированный проект для работы в АПК и социальной сфере в малых городах и муниципалитетах Тюменской области. Часть стажировок полностью оплачивается!
+                    </div>
+                </div>
+
+                <!-- Карточка 4.2: Внутренняя занятость -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wide text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Работа в вузе</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">🤝 Программа занятости ТюмГУ: заработок без стресса</h3>
+                    <p class="text-slate-600 text-sm mt-2">
+                        Университет официально помогает своим студентам совмещать учебу с работой. Ты можешь устроиться внутри вуза (выплаты составляют около 11 609 рублей) на вакансии с гибким графиком: например, контент-менеджером или специалистом call-центра.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК 4: СЕРВИСЫ ПОДДЕРЖКИ ТЮМГУ -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">🛠️ Твоя сервисная экосистема поддержки в ТюмГУ</h2>
+                <p class="text-slate-600 mt-2 text-sm md:text-base">Тебе не нужно проходить этот путь в одиночку. Эксперты вуза помогут на каждом этапе.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold mb-4">1</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Центр развития карьеры</h4>
+                    <p class="text-slate-600">Главное место для старта. Профессиональные карьерные консультанты помогут составить продающее резюме, подготовят к собеседованию и подберут стажировки.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-bold mb-4">2</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Цифровая среда «Факультетус»</h4>
+                    <p class="text-slate-600">Единая онлайн-платформа вуза, где собраны вакансии от более чем 2000-3000 проверенных компаний-партнеров. Заполни профиль — и работодатели сами начнут присылать офферы.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-bold mb-4">3</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Карьерные маркетплейсы</h4>
+                    <p class="text-slate-600">Крупные ежегодные форумы и ярмарки вакансий (главное событие — в ноябре). Проходи экспресс-собеседования, посещай крутые мастер-классы и забирай подарки от компаний.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 5: ФИНАЛЬНЫЙ МОТИВИРУЮЩИЙ ЧЕК-ЛИСТ -->
+    <section class="py-20 px-4 bg-gradient-to-br from-indigo-950 to-slate-900 text-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Твой первый шаг к успеху сегодня</h2>
+            <p class="text-slate-300 mb-10 max-w-xl mx-auto text-sm md:text-base">Регион ждет твоих решений и твоих рук. Не откладывай будущее на завтра, начни прямо сейчас!</p>
+            
+            <div class="text-left bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 space-y-4 max-w-xl mx-auto text-sm">
+                <label class="flex items-start gap-4 p-3 hover:bg-white/5 rounded-xl cursor-pointer transition-colors">
+                    <input type="checkbox" class="w-5 h-5 rounded text-blue-600 border-white/20 bg-transparent mt-0.5 focus:ring-blue-500">
+                    <span>Зайди на платформу <strong>«Факультетус»</strong> ТюмГУ и полностью заполни профиль студента.</span>
+                </label>
+                <label class="flex items-start gap-4 p-3 hover:bg-white/5 rounded-xl cursor-pointer transition-colors">
+                    <input type="checkbox" class="w-5 h-5 rounded text-blue-600 border-white/20 bg-transparent mt-0.5 focus:ring-blue-500">
+                    <span>Подпишись на Telegram-канал и группу ВК Центра развития карьеры ТюмГУ, чтобы не пропустить осенний Карьерный маркетплейс.</span>
+                </label>
+                <label class="flex items-start gap-4 p-3 hover:bg-white/5 rounded-xl cursor-pointer transition-colors">
+                    <input type="checkbox" class="w-5 h-5 rounded text-blue-600 border-white/20 bg-transparent mt-0.5 focus:ring-blue-500">
+                    <span>Добавь этот навигатор нацпроектов в закладки браузера, чтобы сверять свои шаги каждый семестр!</span>
+                </label>
+            </div>
+            
+            <p class="text-lg font-bold text-emerald-400 mt-10 tracking-wide uppercase">🚀 Твой успех — в твоих руках!</p>
+        </div>
+    </section>
+
+    <!-- БЛОК 6: О ПРОЕКТЕ И КОМАНДА -->
+    <section class="py-16 px-4 bg-slate-950 text-white border-t border-slate-900">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+                <div class="md:col-span-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">О проекте</span>
+                    <h2 class="text-2xl font-bold mt-4 mb-4">Создано студентами для студентов</h2>
+                    <p class="text-slate-400 leading-relaxed font-light text-sm">
+                        Этот интерактивный инструмент разработан в рамках программы «Обучение служением»[cite: 1]. Мы верим, что нацпроект «Молодёжь и дети» открывает перед каждым студентом ТюмГУ безграничные горизонты — нужно лишь вовремя сделать правильный шаг.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-5 bg-slate-900/50 border border-slate-800 rounded-xl">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Команда проекта[cite: 1]</h4>
+                        <ul class="space-y-1.5 text-slate-300 text-xs">
+                            <li class="flex justify-between"><span>Лмитавская Кристина</span> <span class="text-slate-500 text-[10px]">Презентация</span></li>[cite: 1]
+                            <li class="flex justify-between"><span>Ямпольская Татьяна</span> <span class="text-slate-500 text-[10px]">Тексты</span></li>[cite: 1]
+                            <li class="flex justify-between"><span>Мулюкова Устинья</span> <span class="text-slate-500 text-[10px]">Вёрстка Tilda</span></li>[cite: 1]
+                            <li class="flex justify-between"><span>Кунец Егор</span> <span class="text-slate-500 text-[10px]">Сбор данных</span></li>[cite: 1]
+                            <li class="flex justify-between"><span>Булашев Лев</span> <span class="text-slate-500 text-[10px]">Тестирование</span></li>[cite: 1]
+                            <li class="flex justify-between"><span>Зубков Владислав</span> <span class="text-slate-500 text-[10px]">Тестирование</span></li>[cite: 1]
+                        </ul>
+                    </div>
+                    
+                    <div class="p-5 bg-slate-900/50 border border-slate-800 rounded-xl space-y-4 text-xs">
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Куратор проекта[cite: 1]</h4>
+                            <p class="text-slate-200 font-medium">Жеурова Екатерина Геннадьевна[cite: 1]</p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Социальный партнер[cite: 1]</h4>
+                            <p class="text-slate-400 leading-relaxed text-[11px]">
+                                Департамент по общественным связям, коммуникациям и молодёжной политике Тюменской области / МЦ «Поколение»[cite: 1]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 7: ПОДВАЛ -->
+    <footer class="py-6 px-4 bg-slate-950 text-slate-700 text-center text-[11px] border-t border-slate-900/50">
+        <p>© 2026 Тюменский государственный университет (ТюмГУ). Все права защищены.</p>
+        <p class="mt-1">Разработано в рамках проектного трека «Обучение служением» специально для экосистемы молодежной политики Тюменской области.[cite: 1]</p>
+    </footer>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ТАБОВ -->
+    <script>
+        function switchTab(courseId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'hover:text-slate-900', 'hover:bg-slate-50');
+            });
+            document.getElementById(courseId).classList.add('active');
+            const activeBtn = document.getElementById('btn-' + courseId);
+            activeBtn.classList.remove('text-slate-600', 'hover:text-slate-900', 'hover:bg-slate-50');
+            activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+        }
+    </script>
+</body>
+</html>
