@@ -1116,25 +1116,35 @@
     </footer>
 
     <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ТАБОВ -->
-    <script>
-        function switchTab(courseId) {
-            // Скрываем весь контент табов
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // Сбрасываем стили всех кнопок
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50";
-            });
-            
-            // Показываем нужный таб
-            document.getElementById(courseId).classList.add('active');
-            
-            // Подсвечиваем активную кнопку
-            const activeBtn = document.getElementById('btn-' + courseId);
-            activeBtn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-sm";
+<script>
+    function switchTab(courseId) {
+        // 1. Скрываем весь контент табов
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // 2. Сбрасываем стили всех кнопок до стандартных (серых)
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50";
+        });
+        
+        // 3. Показываем контент выбранного курса
+        const activeContent = document.getElementById(courseId);
+        if (activeContent) {
+            activeContent.classList.add('active');
         }
-    </script>
+        
+        // 4. Назначаем активный (синий) стиль для нажатой кнопки
+        const activeBtn = document.getElementById(courseId + '-btn');
+        if (activeBtn) {
+            activeBtn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-md shadow-blue-500/20";
+        }
+    }
+
+    // Инициализация: при загрузке страницы автоматически открываем 1 курс
+    document.addEventListener("DOMContentLoaded", function() {
+        switchTab('course1');
+    });
+</script>
 </body>
 </html>
