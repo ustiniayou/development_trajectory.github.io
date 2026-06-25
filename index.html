@@ -72,102 +72,139 @@
             </div>
         </div>
     </section>
-    <!-- БЛОК: СОЦИОЛОГИЧЕСКОЕ ОБОСНОВАНИЕ ПРОЕКТА -->
+    <!-- БЛОК: СОЦИОЛОГИЧЕСКОЕ ОБОСНОВАНИЕ ПРОЕКТА (ОПРОС СТУДЕНТОВ)           -->
     <section class="py-12 px-4 max-w-5xl mx-auto">
-        <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm relative overflow-hidden">
+        
+        <!-- Главная белая карточка блока с округлыми краями -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
+            
+            <!-- Двухколоночная сетка (на ПК: 7 колонок текст, 5 колонок диаграмма) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
-                <!-- Левая колонка: Аналитика опроса 100 студентов -->
+                <!-- ЛЕВАЯ КОЛОНКА: АНАЛИТИКА И ТЕКСТОВЫЕ БОЛИ                  -->
                 <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Маленький синий тег сверху -->
                     <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold tracking-wide uppercase">
                         Голос студентов ТюмГУ
                     </span>
+                    
+                    <!-- Главный заголовок блока -->
                     <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         87% студентов подтвердили: этот навигатор необходим вузу
                     </h3>
+                    
+                    <!-- Вводный абзац -->
                     <p class="text-slate-600 text-base leading-relaxed">
                         Мы провели детальный опрос среди 100 студентов ТюмГУ (преимущественно 1 и 2 курсов), чтобы понять, как они взаимодействуют с экосистемой возможностей. Выявленные проблемы оказались системными:
                     </p>
                     
-                    <!-- Главные боли из графиков -->
+                    <!-- Список из 3-х главных болей (карточки с иконками) -->
                     <div class="space-y-3.5">
+                        
+                        <!-- Боль 1: Разброс информации -->
                         <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
                             <span class="text-xl shrink-0 mt-0.5">📂</span>
                             <p class="text-sm text-slate-700 font-medium leading-snug">
                                 <strong class="text-slate-950">56% опрошенных</strong> отметили, что ключевая информация сильно разбросана по разным сайтам, чатам и пабликам ВКонтакте.
                             </p>
                         </div>
+                        
+                        <!-- Боль 2: Сухие описания -->
                         <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
                             <span class="text-xl shrink-0 mt-0.5">📋</span>
                             <p class="text-sm text-slate-700 font-medium leading-snug">
                                 <strong class="text-slate-950">41% респондентов</strong> жалуются на «сухие» описания программ и полное отсутствие пошаговых, понятных алгоритмов действий.
                             </p>
                         </div>
+                        
+                        <!-- Боль 3: Низкая вовлеченность -->
                         <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
                             <span class="text-xl shrink-0 mt-0.5">🔍</span>
                             <p class="text-sm text-slate-700 font-medium leading-snug">
-                                <strong class="text-slate-950">Лишь 17% студентов</strong> активно пользуются возможностями вуза, в то while остальные упускают дедлайны или знают только о базовой стипендии.
+                                <strong class="text-slate-950">Лишь 17% студентов</strong> активно пользуются возможностями вуза, в то время как остальные упускают дедлайны или знают только о базовой стипендии.
                             </p>
                         </div>
-                    </div>
+                        
+                    </div> <!-- / Конец списка болей -->
                     
+                    <!-- Заключительный мелкий текст -->
                     <p class="text-sm text-slate-500 font-normal leading-relaxed pt-2">
                         Именно поэтому создание единой интерактивной дорожной карты, разделенной по годам обучения, получило столь мощный отклик у аудитории. 
                     </p>
-                </div>
-                
-               <div class="lg:col-span-5 flex flex-col justify-between bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-inner min-h-[380px]">
                     
+                </div> <!-- / КОНЕЦ ЛЕВОЙ КОЛОНКИ -->
+                
+                <!-- ПРАВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ CSS-ДИАГРАММА                -->
+                <div class="lg:col-span-5 flex flex-col justify-between bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-inner min-h-[380px]">
+                    
+                    <!-- Верхняя часть виджета: Заголовок и полосы -->
                     <div>
+                        <!-- Заголовок над самой диаграммой -->
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center lg:text-left">
                             Нужен ли ТюмГУ единый навигатор возможностей?
                         </h4>
                         
+                        <!-- Контейнер со строками прогресс-баров -->
                         <div class="space-y-4">
+                            
+                            <!-- Вариант 1: Однозначно ДА (70%) -->
                             <div class="space-y-1">
                                 <div class="flex justify-between text-xs font-semibold text-slate-700">
                                     <span>Да, этого очень не хватает</span>
                                     <span class="text-blue-600 font-bold">70%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
+                                    <!-- Синяя полоса заполнения -->
                                     <div class="bg-blue-600 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 70%"></div>
                                 </div>
                             </div>
 
+                            <!-- Вариант 2: Скорее да (17%) -->
                             <div class="space-y-1">
                                 <div class="flex justify-between text-xs font-semibold text-slate-700">
                                     <span>Скорее да, пользовался бы</span>
                                     <span class="text-indigo-500 font-bold">17%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
+                                    <!-- Фиолетовая полоса заполнения -->
                                     <div class="bg-indigo-500 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 17%"></div>
                                 </div>
                             </div>
 
+                            <!-- Вариант 3: Нет / Затрудняюсь (13%) -->
                             <div class="space-y-1">
                                 <div class="flex justify-between text-xs font-semibold text-slate-600">
                                     <span>Нет / Затрудняюсь ответить</span>
                                     <span class="text-slate-400 font-bold">13%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
+                                    <!-- Серая полоса заполнения -->
                                     <div class="bg-slate-400 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 13%"></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            
+                        </div> <!-- / Конец контейнера со строками -->
+                    </div> <!-- / Конец верхней части виджета -->
 
+                    <!-- Нижняя часть виджета: Зеленый итог и подпись -->
                     <div class="mt-6 pt-4 border-t border-slate-200/60 text-center">
+                        <!-- Зеленая плашка с суммарным результатом -->
                         <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase rounded-xl">
                             <span>🚀</span> Итоговая поддержка: 87%
                         </div>
+                        <!-- Подпись в самом низу карточки -->
                         <span class="text-[10px] text-slate-400 block mt-2 uppercase tracking-wide">
                             Результаты опроса 100 студентов ТюмГУ
                         </span>
                     </div>
-                   
-            </div>
-        </div>
-    </section>
+                    
+                </div> <!-- / КОНЕЦ ПРАВОЙ КОЛОНКИ -->
+
+            </div> <!-- / Конец двухколоночной сетки grid -->
+        </div> <!-- / Конец главной белой карточки -->
+        
+    </section> <!-- / КОНЕЦ ВСЕГО СЕКЦИОННОГО БЛОКА -->
      <!--  ПОЛНОРАЗМЕРНЫЙ БЛОК: ГОРЯЩИЕ ДЕДЛАЙНЫ И ВАЖНЫЕ СОБЫТИЯ ТЮМГУ -->
    <div id="deadlines-section" class="mt-6 mb-6">
     <div class="max-w-6xl mx-auto px-4">
