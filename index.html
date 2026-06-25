@@ -72,17 +72,21 @@
             </div>
         </div>
     </section>
+   <!-- ====================================================================== -->
     <!-- БЛОК: СОЦИОЛОГИЧЕСКОЕ ОБОСНОВАНИЕ ПРОЕКТА (ОПРОС СТУДЕНТОВ)           -->
+    <!-- ====================================================================== -->
     <section class="py-12 px-4 max-w-6xl mx-auto">
         
-        <!-- Главная белая карточка блока с округлыми краями -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm relative overflow-hidden">
+        <!-- Главная белая карточка блока с вашими скруглениями -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 md:p-12 shadow-sm">
             
-            <!-- Двухколоночная сетка (на ПК: 7 колонок текст, 5 колонок диаграмма) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Двухколоночная сетка: на экранах lg делится ровно 50% на 50% -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                 
+                <!-- ---------------------------------------------------------- -->
                 <!-- ЛЕВАЯ КОЛОНКА: АНАЛИТИКА И ТЕКСТОВЫЕ БОЛИ                  -->
-                <div class="lg:col-span-7 space-y-6">
+                <!-- ---------------------------------------------------------- -->
+                <div class="space-y-6">
                     
                     <!-- Маленький синий тег сверху -->
                     <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold tracking-wide uppercase">
@@ -126,7 +130,7 @@
                             </p>
                         </div>
                         
-                    </div> <!-- / Конец списка болей -->
+                    </div>
                     
                     <!-- Заключительный мелкий текст -->
                     <p class="text-sm text-slate-500 font-normal leading-relaxed pt-2">
@@ -135,65 +139,62 @@
                     
                 </div> <!-- / КОНЕЦ ЛЕВОЙ КОЛОНКИ -->
                 
+                
+                <!-- ---------------------------------------------------------- -->
                 <!-- ПРАВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ CSS-ДИАГРАММА                -->
-                <<div class="lg:col-span-5 flex flex-col justify-between bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-inner min-h-[380px]">
+                <!-- ---------------------------------------------------------- -->
+                <div class="flex flex-col justify-between bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-inner min-h-[420px] h-full">
                     
-                    <!-- Верхняя часть виджета: Заголовок и полосы -->
                     <div>
                         <!-- Заголовок над самой диаграммой -->
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center lg:text-left">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6 text-center lg:text-left">
                             Нужен ли ТюмГУ единый навигатор возможностей?
                         </h4>
                         
                         <!-- Контейнер со строками прогресс-баров -->
-                        <div class="space-y-4">
+                        <div class="space-y-5">
                             
                             <!-- Вариант 1: Однозначно ДА (70%) -->
-                            <div class="space-y-1">
+                            <div class="space-y-1.5">
                                 <div class="flex justify-between text-xs font-semibold text-slate-700">
                                     <span>Да, этого очень не хватает</span>
                                     <span class="text-blue-600 font-bold">70%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
-                                    <!-- Синяя полоса заполнения -->
                                     <div class="bg-blue-600 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 70%"></div>
                                 </div>
                             </div>
 
                             <!-- Вариант 2: Скорее да (17%) -->
-                            <div class="space-y-1">
+                            <div class="space-y-1.5">
                                 <div class="flex justify-between text-xs font-semibold text-slate-700">
                                     <span>Скорее да, пользовался бы</span>
                                     <span class="text-indigo-500 font-bold">17%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
-                                    <!-- Фиолетовая полоса заполнения -->
                                     <div class="bg-indigo-500 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 17%"></div>
                                 </div>
                             </div>
 
                             <!-- Вариант 3: Нет / Затрудняюсь (13%) -->
-                            <div class="space-y-1">
+                            <div class="space-y-1.5">
                                 <div class="flex justify-between text-xs font-semibold text-slate-600">
                                     <span>Нет / Затрудняюсь ответить</span>
                                     <span class="text-slate-400 font-bold">13%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/70 h-7 rounded-xl overflow-hidden p-0.5">
-                                    <!-- Серая полоса заполнения -->
                                     <div class="bg-slate-400 h-full rounded-lg transition-all duration-1000 ease-out" style="width: 13%"></div>
                                 </div>
                             </div>
                             
-                        </div> <!-- / Конец контейнера со строками -->
-                    </div> <!-- / Конец верхней части виджета -->
+                        </div>
+                    </div>
 
                     <!-- Нижняя часть виджета: Зеленый итог и подпись -->
                     <div class="mt-6 pt-4 border-t border-slate-200/60 text-center">
-                        <!-- Зеленая плашка с суммарным результатом -->
                         <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase rounded-xl">
                             <span>🚀</span> Итоговая поддержка: 87%
                         </div>
-                        <!-- Подпись в самом низу карточки -->
                         <span class="text-[10px] text-slate-400 block mt-2 uppercase tracking-wide">
                             Результаты опроса 100 студентов ТюмГУ
                         </span>
