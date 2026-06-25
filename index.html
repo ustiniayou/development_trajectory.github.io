@@ -11,6 +11,13 @@
         body { font-family: 'Inter', sans-serif; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        
+        /* КЛАСС ДЛЯ ПОДСВЕТКИ АКТИВНОЙ КНОПКИ КУРСА */
+        .tab-btn.active {
+            background-color: #2563eb !important; /* bg-blue-600 */
+            color: #ffffff !important;            /* text-white */
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1) !important;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-blue-500 selection:text-white">
@@ -292,23 +299,23 @@
 
             <!-- ТАБЫ (Переключатели курсов) -->
             <div class="flex flex-wrap justify-center gap-2 mb-12 bg-white p-2 rounded-full shadow-sm border border-slate-200 max-w-xl mx-auto">
-                <button onclick="switchTab('course-1')" id="btn-course-1" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-sm">
+                <button onclick="switchTab('course1')" id="course1-btn" class="tab-btn active flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
                     1 КУРС
                 </button>
-                <button onclick="switchTab('course-2')" id="btn-course-2" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                <button onclick="switchTab('course2')" id="course2-btn" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
                     2 КУРС
                 </button>
-                <button onclick="switchTab('course-3')" id="btn-course-3" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                <button onclick="switchTab('course3')" id="course3-btn" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
                     3 КУРС
                 </button>
-                <button onclick="switchTab('course-4')" id="btn-course-4" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                <button onclick="switchTab('course4')" id="course4-btn" class="tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
                     4 КУРС +
                 </button>
             </div>
 
 
             <!-- СТРАНИЦА ИНСТРУКЦИЙ: 1 КУРС -->
-            <div id="course-1" class="tab-content active space-y-8">
+            <div id="course1" class="tab-content active space-y-8">
                 <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl mb-6 text-blue-800 font-medium text-center text-base md:text-lg">
                     🎯 Фокус года: Знакомство с молодежной экосистемой Тюмени, первые проекты и прокачка soft skills.
                 </div>
@@ -444,7 +451,7 @@
 
 
             <!-- СТРАНИЦА ИНСТРУКЦИЙ: 2 КУРС -->
-            <div id="course-2" class="tab-content space-y-8">
+            <div id="course2" class="tab-content space-y-8">
                 <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl mb-6 text-blue-800 font-medium text-center text-base md:text-lg">
                     🎯 Фокус года: Упаковка студенческих идей в полноценные социальные проекты, привлечение финансирования и первые стажировки.
                 </div>
@@ -565,11 +572,12 @@
                         </a>
                     </div>
                 </div>
+                
             </div>
 
 
             <!-- СТРАНИЦА ИНСТРУКЦИЙ: 3 КУРС -->
-            <div id="course-3" class="tab-content space-y-8">
+            <div id="course3" class="tab-content space-y-8">
     <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl mb-6 text-blue-800 font-medium text-center text-base md:text-lg">
         🎯 Фокус года: Определение профессиональной траектории и интеграция в бизнес/науку.
     </div>
@@ -800,7 +808,7 @@
 
 
             <!-- СТРАНИЦА ИНСТРУКЦИЙ: 4 КУРС -->
-            <div id="course-4" class="tab-content space-y-8">
+            <div id="course4" class="tab-content space-y-8">
                 <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-blue-800 text-base md:text-lg font-medium text-center shadow-sm">
                     🎯 Фокус года: Государственная служба, оплачиваемая занятость в ТюмГУ без стресса и бесшовный карьерный старт.
                 </div>
@@ -1113,14 +1121,14 @@
     <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ТАБОВ -->
 <script>
     function switchTab(courseId) {
-        // 1. Скрываем весь контент табов
+        // 1. Скрываем контент всех курсов
         document.querySelectorAll('.tab-content').forEach(content => {
             content.classList.remove('active');
         });
         
-        // 2. Сбрасываем стили всех кнопок до стандартных (серых)
+        // 2. Убираем класс подсветки (active) со ВСЕХ кнопок
         document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50";
+            btn.classList.remove('active');
         });
         
         // 3. Показываем контент выбранного курса
@@ -1129,14 +1137,14 @@
             selectedContent.classList.add('active');
         }
         
-        // 4. Назначаем активный (синий) стиль для нажатой кнопки
+        // 4. Добавляем класс активной подсветки на нажатую кнопку
         const activeBtn = document.getElementById(courseId + '-btn');
         if (activeBtn) {
-            activeBtn.className = "tab-btn flex-1 min-w-[100px] text-center py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-md shadow-blue-500/20";
+            activeBtn.classList.add('active');
         }
     }
 
-    // Инициализация: при загрузке страницы автоматически открываем 1 курс
+    // Инициализация: автоматически активируем 'course1' при первой загрузке страницы
     document.addEventListener("DOMContentLoaded", function() {
         switchTab('course1');
     });
